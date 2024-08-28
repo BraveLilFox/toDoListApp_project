@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 67.5%;
+    font-family: 'Nunito Sans';
+}
+:root{
+    --white: #fff;
+    --transparent-white-1: rgba(255,255,255,0.25);
+    --transparent-white-2: rgba(255,255,255,0.1);
+    --blue1: #3f668a;
+    --blue2: #73C8CC;
+    --shadow: rgba(0,0,0,0.2);
+    --font-size-xxsm: 1rem;
+    --font-size-xsm: 1.2rem;
+    --font-size-sm: 1.6rem;
+    --font-size-md:2.4rem;
+    --font-size-lg: 3rem;
+    --font-size-xlg: 4rem;
+    --font-size-xxlg: 6rem;
+}
+body{
+    height: 100vh;
+    background: linear-gradient(
+        135deg,
+        var(--blue1),
+        var(--blue2)
+    );
+}
+.container{
+    border: 2px solid white;
+    width: 40%;
+    min-width: 450px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    padding: 30px 40px;
+}
+#newTask{
+    position: relative;
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    gap: 1rem;
+    background-color: var(--white);
+    padding: 30px 20px;
+    border-radius: 5px;
+    box-shadow: 0 15px 30px var(--shadow);
+}
+#newTask input:focus{
+    outline: none;
+    border-color: var(--blue1);
+}
+#newTask input{
+    position: relative;
+    height: 45px;
+    border: 2px solid #9BAFAF;
+    border-radius: 5px;
+    font-family: 'Nunito Sans';
+    font-size: var(--font-size-sm);
+    padding: 12px;
+    color: #111;
+    font-weight: 500;
+}
+#newTask button{
+    position: relative;
+    font-family: 'Nunito Sans';
+    font-weight: 500;
+    font-size: var(--font-size-sm);
+    border: none;
+    border-radius: 5px;
+    background-color: var(--blue1);
+    color: #fff;
+    cursor: pointer;
+}
+#tasks{
+    position: relative;
+    background-color: #fff;
+    padding: 30px 20px;
+    margin-top: 60px;
+    border-radius: 5px;
+    box-shadow: 0 15px 30px var(--shadow);
+    width: 100%;
+    font-size: 16px;
+}
+.task{
+    background-color: #fff;
+    height: 50px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #9BAFAF;
+}
+.task span{
+    font-family: 'Nunito Sans';
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    cursor: pointer;
+}
+.task button{
+    background-color: var(--blue1);
+    color: #fff;
+    height: 100%;
+    width: 40px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+.task button i{
+    font-size: 20px;
+}
+.completed{
+    text-decoration: line-through;
+}
