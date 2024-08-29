@@ -1,3 +1,11 @@
+// Press enter to add a task
+document.querySelector('#typeTask')
+    .addEventListener("keyup", function(event){
+        event.preventDefault();
+        if(event.keyCode === 13){
+            document.getElementById('push').click();
+        }
+    });
 // Adding a pop-up window to let someone know
 //             they didn't fill out the input line
 document.querySelector('#push').onclick = function(){
